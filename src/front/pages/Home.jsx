@@ -1,6 +1,10 @@
 import React, { useEffect } from "react"
 import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import astralLogo from "../assets/img/astral_logo_transparent.png";
+import bg from "../assets/img/astral-bg-desktop.png";
+import { useNavigate } from "react-router-dom";
+
 
 export const Home = () => {
 
@@ -31,21 +35,36 @@ export const Home = () => {
 	useEffect(() => {
 		loadMessage()
 	}, [])
+	const navigate = useNavigate();
 
 	return (
-		<div className="text-center mt-5">
-			<h1 className="display-4">Hello Rigo!!</h1>
+		<div className="text-center mt-5 "
+		style={{
+				backgroundImage: `url(${bg})`,
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				backgroundRepeat: "no-repeat",
+				backgroundAttachment: "fixed", // nice parallax on desktop
+				minHeight: "100vh",            // fill screen even if content is short
+				width: "100%"                  // ensure full width
+				}}>
+			<h1 className="display-4 text-white p-5 ">Welcome to !</h1>
 			<p className="lead">
-				<img src={rigoImageUrl} className="img-fluid rounded-circle mb-3" alt="Rigo Baby" />
+					 <img
+						src={astralLogo}
+						alt="Astral logo"
+						className="img-fluid mx-auto d-block"
+						style={{ maxHeight: "550px" }}   // caps size without breaking responsiveness
+						loading="lazy"
+						decoding="async"
+					/>
 			</p>
-			<div className="alert alert-info">
-				{store.message ? (
-					<span>{store.message}</span>
-				) : (
-					<span className="text-danger">
-						Loading message from the backend (make sure your python 🐍 backend is running)...
-					</span>
-				)}
+			<div className="p-5">
+				
+				<button  onClick={() => navigate("/login")} className="btn btn-dark  btn-lg">
+					Get Started ! 
+				</button>
+  			
 			</div>
 		</div>
 	);
