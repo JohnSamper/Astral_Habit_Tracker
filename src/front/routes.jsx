@@ -14,6 +14,7 @@ import { Signup } from "./pages/Signup";
 import { AboutUs } from "./pages/AboutUs";
 import { Pricing } from "./pages/Pricing";
 import { Features } from "./pages/Features";
+import { UserDashboard } from "./pages/UserDashboard";
 
 
 export const router = createBrowserRouter(
@@ -38,6 +39,7 @@ export const router = createBrowserRouter(
         <Route path="/Aboutus" element={<AboutUs/>} /> 
         <Route path="/Pricing" element={<Pricing/>}/>
         <Route path="/Features" element={<Features/>} /> 
+        <Route path="/dashboard" element={<UserDashboard />} />
       </Route>
     )
 );
