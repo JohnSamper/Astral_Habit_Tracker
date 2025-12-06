@@ -10,7 +10,7 @@ export const Features = () => {
     const navigate = useNavigate();
 
     return(
-        <h1>yooooo  i am the features page </h1>
+        <h1> Hey there i am the features page, nice. Weather huh ?  </h1>
 
     );
 

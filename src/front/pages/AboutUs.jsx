@@ -10,7 +10,7 @@ export const AboutUs = () => {
     const navigate = useNavigate();
 
     return(
-        <h1>yooooo. i. am the About us page :)  </h1>
+        <h1> Hey this is the About us page :)  </h1>
 
     );
 

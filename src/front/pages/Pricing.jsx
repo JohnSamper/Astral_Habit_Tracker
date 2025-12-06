@@ -10,7 +10,7 @@ export const Pricing = () => {
     const navigate = useNavigate();
 
     return(
-        <h1>yooooo  im am the pricing page </h1>
+        <h1> Hello i am the  pricing page </h1>
         
         
 
